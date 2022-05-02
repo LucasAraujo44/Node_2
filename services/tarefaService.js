@@ -3,15 +3,13 @@ const Tarefa = require('../models/Tarefa')
 
 exports.CadastrarTarefa = async (req, res) => {
     const { descricao, endereco, idPessoa } = req.body
-
     const tarefa = {
         descricao,
         endereco,
         idPessoa
-
     }
         try {
-            const pessoa = await Pessoa.findOne({ _id: idPessoa }) // espera o result do bd para mostar apenas aquele que possui o id pesquisado
+            const pessoa = await Pessoa.findOne({ _id: idPessoa}) // espera o result do bd para mostar apenas aquele que possui o id pesquisado
 
             if (!pessoa) {
                 res.status(404).json({ body: 'Registro não encontrado para o id: ' + idPessoa })
@@ -25,6 +23,3 @@ exports.CadastrarTarefa = async (req, res) => {
         res.status(500).json({ error: error })
     }
 }
-
-
-
