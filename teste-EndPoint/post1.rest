@@ -1,0 +1,20 @@
+POST http://localhost:3000/pessoa HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lucas",
+    "cpf": "12345678900",
+    "birthDate": "01/01/2000",
+    "email": "lucastecbike@gmail.com",
+    "password": "123456",
+    "address": "123456",
+    "number": "2525",
+    "complement":"house",
+    "city": "belem",
+    "state":"PA",
+    "country": "Brasil",
+    "zipCode": "91"
+    
+}
+
+// 626d699642e101e32dfdb66a usuario que nao existe para fazer teste no mongo
